@@ -7,7 +7,9 @@ body {
   background: rgba(2, 6, 23, 1);
   color: white;
 }
-
+.menu {
+  display: none;
+}
 .top-part {
   width: 100%;
   background-repeat: no-repeat;
@@ -23,13 +25,14 @@ body {
   color: white;
   position: fixed;
   left: 20px;
-  top: 0;
+  top: 6px;
   border-bottom: 1px solid rgb(10, 20, 43);
-  right: 20px;
-  background-color: rgb(3, 6, 23);
+  right: 32px;
+  background-color: #1f1142;
+  border-radius: 20px;
 }
 
-.navbar > div:nth-child(2) {
+.navbar > div:nth-child(4) {
   display: flex;
 }
 
@@ -40,6 +43,10 @@ body {
   font-weight: 700;
   line-height: 21.6px;
   text-align: center;
+}
+
+#menu-item {
+  display: none;
 }
 
 .navbar button {
@@ -69,9 +76,9 @@ body {
 }
 
 .top-heading h1 span {
-  background: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .top-heading h1 + p {
@@ -472,35 +479,33 @@ body {
   margin: 87px auto;
 }
 
-.blog{
+.blog {
   width: 87.77%;
-  margin:auto; 
+  margin: auto;
   padding: 0px 4%;
 }
 
-.blog h1{
+.blog h1 {
   width: 699px;
   margin: auto;
-font-family: Satoshi;
-font-size: 48px;
-font-weight: 900;
-line-height: 64.8px;
-text-align: center;
-
+  font-family: Satoshi;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 64.8px;
+  text-align: center;
 }
 
-.blog > p{
+.blog > p {
   margin: auto;
   width: 638px;
-font-family: Satoshi;
-font-size: 24px;
-font-weight: 700;
-line-height: 32.4px;
-text-align: center;
-
+  font-family: Satoshi;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-align: center;
 }
 
-.blog > div{
+.blog > div {
   margin: 70px 0px;
   display: flex;
   justify-content: center;
@@ -508,44 +513,72 @@ text-align: center;
   gap: 20px;
 }
 
-.blog > div > div > div{
-  background-color: #1a143a;
-padding: 20px 16px;
+.blog > div > div{
+  border: 1px solid #1a143a;
+  border-radius: 20px;
+  overflow: hidden;
 }
-.blog > div img{
+
+.blog > div > div > div {
+  background-color: #1a143a;
+  padding: 20px 16px;
+}
+.blog > div img {
   width: 100%;
 }
 
-.blog h4{
+.blog h4 {
   margin-bottom: 15px;
-font-family: Satoshi;
-font-size: 16px;
-font-weight: 700;
-line-height: 21.6px;
-text-align: left;
-
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
 }
 
-.blog > div p{
-font-family: Satoshi;
-font-size: 14px;
-font-weight: 700;
-line-height: 18.9px;
-text-align: left;
-color: hsla(225, 19%, 63%, 1);
-margin-bottom: 20px;
-
+.blog > div p {
+  font-family: Satoshi;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.9px;
+  text-align: left;
+  color: hsla(225, 19%, 63%, 1);
+  margin-bottom: 20px;
 }
 
-.blog > div button{
+.blog > div button {
   padding: 12px 14px;
-font-family: Satoshi;
-font-size: 10px;
-font-weight: 700;
-line-height: 13.5px;
-text-align: left;
-background-color: white;
-border: 0;
-border-radius: 12px;
+  font-family: Satoshi;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13.5px;
+  text-align: left;
+  background-color: white;
+  border: 0;
+  border-radius: 12px;
+}
 
+.linear-head{
+  background: linear-gradient(94.68deg, #4cc9f0 2.51%, #3f37c9 56.42%);
+  font-weight: 900;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (min-width: 431px) and (max-width: 912px) {
+  nav > .navbar p {
+    display: none;
+  }
+  .navbar div:nth-child(1) {
+    order: 1;
+  }
+  .navbar div:last-child {
+    order: 0;
+  }
+  .menu {
+    display: block;
+  }
+
+  
 }
